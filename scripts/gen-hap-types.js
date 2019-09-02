@@ -5,8 +5,8 @@ const path = require('path')
 const rp = require('request-promise')
 
 async function load(url) {
-  let types = await rp.get('https://raw.githubusercontent.com/KhaosT/HAP-NodeJS/master/lib/gen/HomeKitTypes.js')
-  let tvTypes = await rp.get('https://raw.githubusercontent.com/KhaosT/HAP-NodeJS/master/lib/gen/HomeKitTypes-Television.js')
+  let types = await rp.get('https://raw.githubusercontent.com/KhaosT/HAP-NodeJS/master/src/lib/gen/HomeKit.ts')
+  let tvTypes = await rp.get('https://raw.githubusercontent.com/KhaosT/HAP-NodeJS/master/src/lib/gen/HomeKit-TV.ts')
 
   types += tvTypes;
 
